@@ -29,5 +29,9 @@ namespace cSharpDesignPatterns
                 }
             }
         }
+        public void FavoriteTrait()
+        {
+            Console.WriteLine("The most wonderful thing about singletons is I'm the only one!");
+        }
     }
 }

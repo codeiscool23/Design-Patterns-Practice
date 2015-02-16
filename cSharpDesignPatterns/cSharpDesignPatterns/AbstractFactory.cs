@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cSharpDesignPatterns
 {
-    internal class AbstractFactory
+    public class AbstractFactory
     {
         public abstract class CarFactory
         {
@@ -134,3 +134,5 @@ namespace cSharpDesignPatterns
         }
     }
 }
+
+

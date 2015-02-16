@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cSharpDesignPatterns
 {
-    class Strategy
+    public class Strategy
     {
         /* This pattern enables an algorithm's behavior to be selected at runtime. The strategy pattern
             1)defines a family of algorithms,
@@ -22,7 +22,7 @@ namespace cSharpDesignPatterns
         }
          
         //strategy 1: minus
-        class Minus : ICalculateInterface
+        public class Minus : ICalculateInterface
         {
             public int Calculate(int value1, int value2)
             {
@@ -32,7 +32,7 @@ namespace cSharpDesignPatterns
         }
 
         //strategy 2: plus
-        class Plus : ICalculateInterface
+        public class Plus : ICalculateInterface
         {
             public int Calculate(int value1, int value2)
             {
@@ -42,7 +42,7 @@ namespace cSharpDesignPatterns
         }
 
         //strategy 3: multiply
-        class Multiply : ICalculateInterface
+        public class Multiply : ICalculateInterface
         {
             public int Calculate(int value1, int value2)
             {
@@ -52,7 +52,7 @@ namespace cSharpDesignPatterns
         }
 
         //strategy 4: divide
-        class Divide: ICalculateInterface
+        public class Divide: ICalculateInterface
         {
             public int Calculate(int value1, int value2)
             {
@@ -62,7 +62,7 @@ namespace cSharpDesignPatterns
         }
 
         //class to be used as the client for the strategy
-        class CalculateClient
+        public class CalculateClient
         {
             private ICalculateInterface calculateInterface;
 

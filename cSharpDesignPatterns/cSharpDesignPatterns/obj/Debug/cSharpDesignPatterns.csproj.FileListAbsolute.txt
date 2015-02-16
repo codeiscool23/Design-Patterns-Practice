@@ -2,3 +2,4 @@ C:\GITHUB\Design-Patterns-Practice\cSharpDesignPatterns\cSharpDesignPatterns\bin
 C:\GITHUB\Design-Patterns-Practice\cSharpDesignPatterns\cSharpDesignPatterns\bin\Debug\cSharpDesignPatterns.pdb
 C:\GITHUB\Design-Patterns-Practice\cSharpDesignPatterns\cSharpDesignPatterns\obj\Debug\cSharpDesignPatterns.dll
 C:\GITHUB\Design-Patterns-Practice\cSharpDesignPatterns\cSharpDesignPatterns\obj\Debug\cSharpDesignPatterns.pdb
+C:\GITHUB\Design-Patterns-Practice\cSharpDesignPatterns\cSharpDesignPatterns\obj\Debug\cSharpDesignPatterns.csprojResolveAssemblyReference.cache
