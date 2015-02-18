@@ -42,6 +42,7 @@
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="Decorator.cs" />
     <Compile Include="FactoryMethod.cs" />
+    <Compile Include="Observer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="Strategy.cs" />
