@@ -57,6 +57,17 @@ namespace ConsoleAppForDesignPatternVerification
             cSharpDesignPatterns.FactoryMethod fmFactoryMethod = new FactoryMethod();
            var person = fmFactoryMethod.GetPeople(PeopleType.Rural);
            Console.WriteLine("this person identifies as a: " + person.GetName());
+
+
+           Console.WriteLine("");
+
+           //decorator pattern
+           Console.WriteLine("Observer Pattern");
+               cSharpDesignPatterns.Observer.Subject subject = new Observer.Subject();
+            cSharpDesignPatterns.Observer.Observerr test1 = new Observer.Observerr(subject,"Center", "\t\t");
+            cSharpDesignPatterns.Observer.Observerr test2 = new Observer.Observerr(subject, "Right", "\t\t\t\t");
+            subject.Go();
+
             Console.ReadLine();
         }
     }

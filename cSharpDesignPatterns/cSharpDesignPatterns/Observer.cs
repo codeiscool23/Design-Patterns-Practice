@@ -21,7 +21,7 @@ namespace cSharpDesignPatterns
 
             public event Callback Notify;
 
-            Simulator simulator = new Simulator();
+            private Simulator simulator = new Simulator();
             private const int speed = 200;
             public string SubjectState { get; set; }
 
@@ -30,7 +30,7 @@ namespace cSharpDesignPatterns
                 new Thread(new ThreadStart(Run)).Start();
             }
 
-            void Run()
+            private void Run()
             {
                 foreach (string s in simulator)
                 {
@@ -39,54 +39,55 @@ namespace cSharpDesignPatterns
                     Notify(s);
                     Thread.Sleep(speed); //milliseconds
                 }
-                
-            }
-
-            interface IObserver
-            {
-                void Update(string state);
-            }
-
-            public class Observer : IObserver
-            {
-                private string name;
-                private Subject subject;
-                private string state;
-                private string gap;
-
-                public Observer(Subject subject, string name, string gap)
-                {
-                    this.subject = subject;
-                    this.name = name;
-                    this.gap = gap;
-                    subject.Notify += Update;
-                }
-
-                public void Update(string subjectState)
-                {
-                    state = subjectState;
-                    Console.WriteLine(gap+name+ ": " + state);
-                }
 
             }
+        }
 
-            public class Simulator : IEnumerable
+        interface IObserver
+        {
+            void Update(string state);
+        }
+
+        public class Observerr : IObserver
+        {
+            private string name;
+            private Subject subject;
+            private string state;
+            private string gap;
+
+            public Observerr(Subject subject, string name, string gap)
             {
-                private string[] moves = {"5", "3", "1", "6", "7"};
+                this.subject = subject;
+                this.name = name;
+                this.gap = gap;
+                subject.Notify += Update;
+            }
 
-                public IEnumerator GetEnumerator()
-                {
-                    foreach (string element in moves)
-                    {
-                        yield return element;
-                    }
-                }
-               
+            public void Update(string subjectState)
+            {
+                state = subjectState;
+                Console.WriteLine(gap + name + ": " + state);
             }
 
         }
 
+        public class Simulator : IEnumerable
+        {
+            private string[] moves = { "5", "3", "1", "6", "7" };
 
+            public IEnumerator GetEnumerator()
+            {
+                foreach (string element in moves)
+                {
+                    yield return element;
+                }
+            }
+
+        }
 
     }
+
+
+
+
 }
